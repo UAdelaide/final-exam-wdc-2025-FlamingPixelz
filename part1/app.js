@@ -69,10 +69,10 @@ let db;
     // Basic insertion for ratings for a walker in database
     const[ratingRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
     if(ratingRows[0].count === 0) {
-        await db.execute(``);
+        await db.execute(`INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
+        VALUES (11, 2, 1, 4, 'This dog was great!'),
+        (15, 2, 1, 5, 'Had fun');`);
     }
-
-
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
