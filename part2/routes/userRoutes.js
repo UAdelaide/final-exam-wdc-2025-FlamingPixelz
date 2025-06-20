@@ -83,7 +83,10 @@ router.post('/login', async (req, res) => {
 // Deletes user cookie upon logout
 router.post('/logout', (req, res) => {
 
-  req.session.destroy()
+  req.session.destroy((err) => {
+
+      if()
+  });
 
 });
 
