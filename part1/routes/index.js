@@ -13,7 +13,7 @@ router.get('/api/dogs', function(req, res, next) {
 
 
   } catch(err) {
-    res.
+    res.status(500).send('')
   }
 
 });
