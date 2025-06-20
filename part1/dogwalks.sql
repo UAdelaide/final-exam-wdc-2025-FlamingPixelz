@@ -72,6 +72,6 @@ CREATE TABLE WalkRatings (
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
 VALUES ((SELECT dog_id FROM Dogs INNER JOIN Dogs.owner_id ON Users.user_id WHERE Dogs.name = 'Max' AND Users.username = 'alice123'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
 ((SELECT dog_id FROM Dogs INNER JOIN Dogs.owner_id ON Users.user_id WHERE name = 'Bella' AND Users.username = 'carol123'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
-((SELECT dog_id FROM Dogs INNER JOIN Dogs.owner_id ON Users.user_id WHERE name = 'Bella' AND Users.username = 'carol123'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'pending'),
-((SELECT dog_id FROM Dogs INNER JOIN Dogs.owner_id ON Users.user_id WHERE name = 'Bella' AND Users.username = 'carol123'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
+((SELECT dog_id FROM Dogs INNER JOIN Dogs.owner_id ON Users.user_id WHERE name = 'Poppy' AND Users.username = 'carol123'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'pending'),
+((SELECT dog_id FROM Dogs INNER JOIN Dogs.owner_id ON Users.user_id WHERE name = 'Enji' AND Users.username = 'carol123'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
 ((SELECT dog_id FROM Dogs INNER JOIN Dogs.owner_id ON Users.user_id WHERE name = 'Bella' AND Users.username = 'carol123'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'open');
