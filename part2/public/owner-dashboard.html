@@ -130,7 +130,10 @@
 
           try {
 
-            const response = await fetch('/api/yourDogs');
+            const response = await fetch('/api/yourDogs'), {
+              method: 'POST',
+              
+            }
             ownerDogs.value = await response.json();
 
           } catch (err) {
