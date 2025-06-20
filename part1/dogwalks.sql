@@ -55,3 +55,4 @@ CREATE TABLE WalkRatings (
 );
 
 
+INSERT INTO 
