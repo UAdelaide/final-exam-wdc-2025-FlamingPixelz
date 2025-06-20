@@ -96,6 +96,7 @@ router.post('/logout', (req, res) => {
 
 });
 
+// Gets the dogs of the current owner that is logged in
 router.get('/yourDogs', async (req, res) => {
 
   const [owner_id] = req.session.user_id;
