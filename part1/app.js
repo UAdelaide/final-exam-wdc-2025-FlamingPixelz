@@ -55,7 +55,8 @@ let db;
         ((SELECT user_id FROM Users WHERE username = 'Bwana'), 'Enji', 'medium');`);
     }
 
-    const [walkRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRe')
+    const [walkRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
+    if(walkRows[0])
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
