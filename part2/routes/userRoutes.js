@@ -46,6 +46,7 @@ router.post('/login', async (req, res) => {
       WHERE username = ?
     `, [username]);
 
+    // If the 
     if (rows.length === 0) {
       return res.status(401).json({ error: 'The credentials inputted are invalid!' });
     }
