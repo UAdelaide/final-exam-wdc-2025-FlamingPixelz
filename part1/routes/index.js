@@ -11,7 +11,7 @@ router.get('/api/dogs', function(req, res, next) {
 
 });
 
-// Return all open walk requests, including the dog name, requested time, location, and owner's username.
+// Return all open walk requests
 router.get('/api/walkrequests/open', function(req, res, next) {
 
 });
