@@ -63,7 +63,9 @@
 
         async function getCurrentUser () {
           try {
-            
+
+          } catch (err) {
+            error.value = err.message;
           }
         }
 
