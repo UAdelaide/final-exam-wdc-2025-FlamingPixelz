@@ -161,7 +161,7 @@ input {
     margin:10px;
 }
 
-
+/* Positioned logout button and changed it red with a red hover */
 .logoutBtn {
     position: fixed;
     top: 3%;
