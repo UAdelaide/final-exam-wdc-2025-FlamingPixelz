@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var db = 
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -11,7 +12,7 @@ router.get('/api/dogs', async function(req, res, next) {
 
   try {
     const [dogs] = await db.execute('SELECT * FROM books');
-    res.json(books);
+    res.json(dogs);
   } catch(err) {
     res.status(500).json({ error: 'Failed to fetch dogs from database' });
   }
