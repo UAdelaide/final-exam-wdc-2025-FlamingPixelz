@@ -99,7 +99,7 @@ router.post('/logout', (req, res) => {
 // Gets the dogs of the current owner that is logged in
 router.get('/yourDogs', async (req, res) => {
 
-  const { user_id } = req.session.user_id;
+  const user_id = req.session.user_id;
 
   try {
      const [dogs] = await db.query('SELECT dog_id, name FROM Dogs WHERE owner_id = ?', [user_id]);
