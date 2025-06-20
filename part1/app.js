@@ -36,19 +36,10 @@ let db;
     const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
     if (rows[0].count === 0) {
       await db.execute(`
-        INSERT INTO Users (username, email, password_hash, role)
-VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
-('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
-('carol123', 'carol@example.com', 'hashed789', 'owner'),
-('olivia1', 'olivia@example.com', 'pass123', 'walker'),
-('Bwana', 'Bwana@example.com', 'coolPassword', 'owner');
-
-INSERT INTO Dogs (owner_id, name, size)
-VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
-((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
-((SELECT user_id FROM Users WHERE username = 'carol123'), 'Poppy', 'large'),
-((SELECT user_id FROM Users WHERE username = 'alice123'), 'Henry', 'small'),
-((SELECT user_id FROM Users WHERE username = 'Bwana'), 'Enji', 'medium');
+        INSERT INTO books (title, author) VALUES
+        ('1984', 'George Orwell'),
+        ('To Kill a Mockingbird', 'Harper Lee'),
+        ('Brave New World', 'Aldous Huxley')
       `);
     }
   } catch (err) {
