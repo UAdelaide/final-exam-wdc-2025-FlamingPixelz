@@ -68,7 +68,9 @@ let db;
 
     // Basic insertion for ratings for a walker in database
     const[ratingRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
-    if(ratingRows[0])
+    if(ratingRows[0].count === 0) {
+        await db.execute(``);
+    }
 
 
   } catch (err) {
