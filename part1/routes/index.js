@@ -47,8 +47,7 @@ router.get('/api/walkers/summary', async function(req, res, next) {
 
   try {
     const[walkerSummary] = await db.execute(
-
-      
+      `SELECT u.username, `
 
     );
 
