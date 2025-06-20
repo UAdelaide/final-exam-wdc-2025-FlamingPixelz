@@ -55,9 +55,15 @@ let db;
         ((SELECT user_id FROM Users WHERE username = 'Bwana'), 'Enji', 'medium');`);
     }
 
+    // Insert walk
     const [walkRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
     if(walkRows[0].count === 0) {
-        await db.execute(``);
+        await db.execute(`INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
+        VALUES ((SELECT dog_id FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE Dogs.name = 'Max' AND Users.username = 'alice123'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
+        ((SELECT dog_id FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE name = 'Bella' AND Users.username = 'carol123'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
+        ((SELECT dog_id FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE name = 'Max' AND Users.username = 'alice123'), '2025-05-11 09:00:00', 60, 'City Centre', 'completed'),
+        ((SELECT dog_id FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE name = 'Enji' AND Users.username = 'Bwana'), '2025-06-10 10:30:00', 30, 'Glenelg Beach', 'accepted'),
+        ((SELECT dog_id FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE name = 'Henry' AND Users.username = 'alice123'), '2025-06-11 13:30:00', 45, 'Court St', 'cancelled');`);
     }
 
   } catch (err) {
