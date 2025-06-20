@@ -89,7 +89,7 @@ router.post('/logout', (req, res) => {
       if(err) {
         res.status(500).json({ message: 'The logout failed!' });
       }
-      //Other
+      // Otherwise delete cookie and route to login page
       res.clearCookie('connect.sid');
       res.redirect('/index.html');
   });
