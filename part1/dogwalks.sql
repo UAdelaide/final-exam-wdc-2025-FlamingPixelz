@@ -71,5 +71,5 @@ CREATE TABLE WalkRatings (
 -- VALUES ('Bwana', 'Bwana@example.com', 'coolPassword', 'walker');
 
 INSERT INTO Dogs (owner_id, name, size)
-VALUES ((SELECT user_id FROM Users WHERE user_id == 1))
+VALUES ((SELECT user_id FROM Users WHERE username = "alice123"))
 
