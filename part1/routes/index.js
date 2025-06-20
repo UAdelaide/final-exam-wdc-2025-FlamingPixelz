@@ -26,9 +26,10 @@ router.get('/api/dogs', async function(req, res, next) {
 router.get('/api/walkrequests/open', function(req, res, next) {
 
   try {
+    const[walkRequests] = await db.execute
 
   } catch(err) {
-    
+
   }
 
 });
