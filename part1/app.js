@@ -66,7 +66,9 @@ let db;
         ((SELECT dog_id FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE name = 'Henry' AND Users.username = 'alice123'), '2025-06-11 13:30:00', 45, 'Court St', 'cancelled');`);
     }
 
-    const[ratingRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests')
+    // Basic insertion for 
+    const[ratingRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
+
 
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
