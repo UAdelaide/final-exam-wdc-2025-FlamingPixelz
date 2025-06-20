@@ -51,7 +51,7 @@ router.post('/login', async (req, res) => {
     const user = rows[0];
 
     if (password !== user.password_hash) {
-      return
+      return res.status(401).json()
     }
     // Creating data gathered from user session
     if(password === rows[0].password) {
