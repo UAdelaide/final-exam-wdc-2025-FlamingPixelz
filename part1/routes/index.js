@@ -13,7 +13,7 @@ router.get('/api/dogs', async function(req, res, next) {
   try {
     const [dogs] = await db.execute(
       'SELECT Dogs.name, Dogs.size FROM Dogs
-      '
+      INNER JOIN '
     );
     res.json(dogs);
   } catch(err) {
