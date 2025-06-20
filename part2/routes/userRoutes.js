@@ -58,7 +58,7 @@ router.post('/login', async (req, res) => {
       };
 
       res.json({ message: 'Login successful', user: rows[0] });
-      res.json({ redirect: '/'})
+      res.json({ redirect: '/owner-dashboard' });
     }
 
   } catch (error) {
