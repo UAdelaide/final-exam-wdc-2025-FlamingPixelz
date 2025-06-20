@@ -56,16 +56,10 @@ CREATE TABLE WalkRatings (
 
 
 INSERT INTO Users (username, email, password_hash, role)
-VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner');
-
-INSERT INTO Users (username, email, password_hash, role)
-VALUES ('bobwalker', 'bob@example.com', 'hashed456', 'walker');
-
-INSERT INTO Users (username, email, password_hash, role)
-VALUES ('carol123', 'carol@example.com', 'hashed789', 'owner');
-
-INSERT INTO Users (username, email, password_hash, role)
-VALUES ('olivia1', 'olivia@example.com', 'pass123', 'walker');
+VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+VALUES ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
+VALUES ('carol123', 'carol@example.com', 'hashed789', 'owner'),
+VALUES ('olivia1', 'olivia@example.com', 'pass123', 'walker'),
 
 INSERT INTO Users (username, email, password_hash, role)
 VALUES ('Bwana', 'Bwana@example.com', 'coolPassword', 'owner');
