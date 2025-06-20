@@ -98,7 +98,7 @@ router.post('/logout', (req, res) => {
 
 router.get('/yourDogs', async (req, res) => {
 
-  const [dogs] = await db.query('SELECT name FROM')
+  const [dogs] = await db.query('SELECT name FROM Dogs WHERE own')
 
 
 });
