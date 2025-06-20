@@ -131,7 +131,7 @@
           try {
 
             const response = await fetch('/api/youDogs');
-            ownerDogs.value = 
+            ownerDogs.value = await res.json();
 
           } catch (err) {
             error.value = err.message;
