@@ -162,7 +162,7 @@ input {
 }
 
 .logoutBtn {
-    position: absolute;
+    position: relative;
     top: 5%;
     right: 5%;
 }
