@@ -70,5 +70,6 @@ CREATE TABLE WalkRatings (
 -- INSERT INTO Users (username, email, password_hash, role)
 -- VALUES ('Bwana', 'Bwana@example.com', 'coolPassword', 'walker');
 
-INSERT INTO Dogs (ownername, size)
+INSERT INTO Dogs (owner_id, name, size)
+VALUES
 
