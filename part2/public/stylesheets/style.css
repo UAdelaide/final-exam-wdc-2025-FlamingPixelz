@@ -162,5 +162,6 @@ input {
 }
 
 .logout {
-    
+    position: relative;
+    right: 5%;
 }
