@@ -90,6 +90,7 @@ router.post('/logout', (req, res) => {
       }
       res.clearCookie('connect.sid');
       res.redirect('/index.html');
+      res.sendStatus
   });
 
 });
