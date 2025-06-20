@@ -14,7 +14,7 @@ app.use(session({
     secret: 'secret123',
     resave: false,
     saveUninitialized: false,
-    cookie:
+    cookie: { secure: false }
 
 }));
 
