@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 router.get('/api/dogs', function(req, res, next) {
 
   try {
-    const [books] = await db.execute('SELECT * FROM books');
+    const [dogs] = await db.execute('SELECT * FROM books');
     res.json(books);
   } catch(err) {
     res.status(500).json({ error: 'Failed to fetch dogs from database' });
