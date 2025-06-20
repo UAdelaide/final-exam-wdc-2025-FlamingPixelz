@@ -108,7 +108,6 @@ router.get('/yourDogs', async (req, res) => {
     res.status(500).json({ error: 'Failed to get Owner dogs from Database!' });
   }
 
-
 });
 
 
