@@ -58,7 +58,8 @@
         };
       },
 
-      async getImages() {
+      methods: {
+        async getImages() {
             try{
 
                 const getImage = await fetch('https://dog.ceo/api/breeds/image/random');
@@ -69,6 +70,7 @@
                 console.error('Failed to get images from API!');
             }
         }
+      }
     }).mount('#app');
   </script>
 
