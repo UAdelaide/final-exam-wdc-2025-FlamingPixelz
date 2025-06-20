@@ -19,4 +19,7 @@ button {
   background-color: grey;
   color: yellow;
   position: fixed;
+
+  left: 50%;
+  
 }
