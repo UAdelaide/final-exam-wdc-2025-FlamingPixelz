@@ -68,7 +68,7 @@ INSERT INTO Users (username, email, password_hash, role)
 VALUES ('olivia1', 'olivia@example.com', 'pass123', 'walker');
 
 INSERT INTO Users (username, email, password_hash, role)
-VALUES ('Bwana', 'Bwana@example.com', 'coolPassword', 'walker');
+VALUES ('Bwana', 'Bwana@example.com', 'coolPassword', 'owner');
 
 INSERT INTO Dogs (owner_id, name, size)
 VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
