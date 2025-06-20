@@ -27,7 +27,7 @@ router.get('/api/walkrequests/open', async function(req, res, next) {
 
   try {
     const[walkRequests] = await db.execute(
-      `SELECT `
+      `SELECT request_id, dog_name, requested_time`
     );
 
     res.json(walkRequests);
