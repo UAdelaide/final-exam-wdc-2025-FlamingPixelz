@@ -71,3 +71,4 @@ CREATE TABLE WalkRatings (
 -- VALUES ('Bwana', 'Bwana@example.com', 'coolPassword', 'walker');
 
 INSERT INTO Dogs (name, size)
+
