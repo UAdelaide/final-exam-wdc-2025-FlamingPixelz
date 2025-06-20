@@ -30,7 +30,8 @@ router.get('/api/walkrequests/open', async function(req, res, next) {
       `SELECT w.request_id, d.dog_name, w.requested_time, w.duration_minutes, w.location, username as u.owner_username
       FROM WalkRequests w
       INNER JOIN Dogs d ON w.dog_id = d.dog_id
-      INNER JOIN Users u ON d.`
+      INNER JOIN Users u ON d.owner_id = u.user_id
+      WHERE `
     );
 
     res.json(walkRequests);
