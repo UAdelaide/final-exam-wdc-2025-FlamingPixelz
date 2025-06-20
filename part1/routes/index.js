@@ -23,10 +23,12 @@ router.get('/api/dogs', async function(req, res, next) {
 });
 
 // Return all open walk requests
-router.get('/api/walkrequests/open', function(req, res, next) {
+router.get('/api/walkrequests/open', async function(req, res, next) {
 
   try {
-    const[walkRequests] = await db.execute
+    const[walkRequests] = await db.execute(
+
+    );
 
   } catch(err) {
 
