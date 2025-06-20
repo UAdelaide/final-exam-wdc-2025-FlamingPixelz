@@ -66,8 +66,9 @@ let db;
         ((SELECT dog_id FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE name = 'Henry' AND Users.username = 'alice123'), '2025-06-11 13:30:00', 45, 'Court St', 'cancelled');`);
     }
 
-    // Basic insertion for 
+    // Basic insertion for ratings for a walker in database
     const[ratingRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
+    if(ratingRows[0])
 
 
   } catch (err) {
