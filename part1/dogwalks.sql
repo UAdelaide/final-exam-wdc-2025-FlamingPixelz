@@ -70,4 +70,4 @@ CREATE TABLE WalkRatings (
 -- ((SELECT user_id FROM Users WHERE username = 'Bwana'), 'Enji', 'medium');
 
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-VALUES ((SELECT Dogs.dog_id FROM Dogs WHERE ))
+VALUES ((SELECT Dogs.dog_id FROM Dogs WHERE ), )
