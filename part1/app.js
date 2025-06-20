@@ -45,7 +45,9 @@ let db;
       `);
     }
     const [dogRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
-    if(dogRows[0])
+    if(dogRows[0].count === 0) {
+        await db.execute();
+    }
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
