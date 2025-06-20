@@ -90,7 +90,7 @@ router.post('/logout', (req, res) => {
         return;
       }
       res.clearCookie('connect.sid');
-      res.redirect('')
+      res.redirect('/index.html');
       res.json({ message: 'You successfully logged out!' });
   });
 
