@@ -55,7 +55,7 @@ let db;
         ((SELECT user_id FROM Users WHERE username = 'Bwana'), 'Enji', 'medium');`);
     }
 
-    // Insert walk
+    // Insert WalkRequest data if table is empty
     const [walkRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
     if(walkRows[0].count === 0) {
         await db.execute(`INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
