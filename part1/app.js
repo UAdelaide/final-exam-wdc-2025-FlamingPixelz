@@ -54,6 +54,8 @@ let db;
         ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Henry', 'small'),
         ((SELECT user_id FROM Users WHERE username = 'Bwana'), 'Enji', 'medium');`);
     }
+
+    const [walkRows]
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
