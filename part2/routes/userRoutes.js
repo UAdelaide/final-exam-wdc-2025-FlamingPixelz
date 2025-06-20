@@ -85,7 +85,9 @@ router.post('/logout', (req, res) => {
 
   req.session.destroy((err) => {
 
-      if()
+      if(err) {
+        res.status(500)
+      }
   });
 
 });
