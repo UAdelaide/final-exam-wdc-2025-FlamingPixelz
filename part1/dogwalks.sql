@@ -74,4 +74,4 @@ VALUES ((SELECT dog_id FROM Dogs INNER JOIN Dogs.owner_id ON Users.user_id WHERE
 ((SELECT dog_id FROM Dogs INNER JOIN Dogs.owner_id ON Users.user_id WHERE name = 'Bella' AND Users.username = 'carol123'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
 ((SELECT dog_id FROM Dogs INNER JOIN Dogs.owner_id ON Users.user_id WHERE name = 'Poppy' AND Users.username = 'carol123'), '2025-06-10 09:30:00', 60, 'City Centre', 'pending'),
 ((SELECT dog_id FROM Dogs INNER JOIN Dogs.owner_id ON Users.user_id WHERE name = 'Enji' AND Users.username = 'carol123'), '2025-06-10 09:30:00', 30, 'Beachside Ave', 'accepted'),
-((SELECT dog_id FROM Dogs INNER JOIN Dogs.owner_id ON Users.user_id WHERE name = 'Henry' AND Users.username = 'carol123'), '2025-06-10 09:30:00', , 'Beachside Ave', 'open');
+((SELECT dog_id FROM Dogs INNER JOIN Dogs.owner_id ON Users.user_id WHERE name = 'Henry' AND Users.username = 'carol123'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'open');
