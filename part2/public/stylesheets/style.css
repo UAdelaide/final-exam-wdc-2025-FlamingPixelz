@@ -154,3 +154,7 @@ textarea {
 section {
     display: none;
 }
+
+input {
+    padding: 10%;
+}
