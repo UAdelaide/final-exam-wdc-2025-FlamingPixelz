@@ -69,4 +69,4 @@ CREATE TABLE WalkRatings (
 -- ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Henry', 'small'),
 -- ((SELECT user_id FROM Users WHERE username = 'Bwana'), 'Enji', 'medium');
 
-INSERT INTO WalkRequests (requested_time, )
+INSERT INTO WalkRequests (requested_time, duration_minutes, )
