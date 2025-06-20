@@ -56,7 +56,10 @@ let db;
     }
 
     const [walkRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
-    if(walkRows[0])
+    if(walkRows[0].count === 0) {
+        await db.execute()
+    }
+
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
@@ -71,4 +74,4 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-module.exports = app;
+module.exports = app
