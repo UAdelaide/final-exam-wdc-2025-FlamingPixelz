@@ -50,8 +50,10 @@ router.post('/login', async (req, res) => {
     if (rows.length === 0) {
       return res.status(401).json({ error: 'The credentials inputted are invalid!' });
     }
+    // Stores user information in user variable
     const user = rows[0];
 
+    //
     if (password !== user.password_hash) {
       return res.status(401).json({ error: 'Invalid Email or password!' });
     }
