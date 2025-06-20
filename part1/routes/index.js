@@ -31,7 +31,7 @@ router.get('/api/walkrequests/open', async function(req, res, next) {
       FROM WalkRequests w
       INNER JOIN Dogs d ON w.dog_id = d.dog_id
       INNER JOIN Users u ON d.owner_id = u.user_id
-      WHERE `
+      WHERE w.status = 'open';`
     );
 
     res.json(walkRequests);
