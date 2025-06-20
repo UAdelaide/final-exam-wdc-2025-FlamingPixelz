@@ -91,7 +91,6 @@ router.post('/logout', (req, res) => {
       }
       res.redirect('/index.html');
       res.clearCookie('connect.sid');
-      res.status(200).send('Successful logout');
   });
 
 });
