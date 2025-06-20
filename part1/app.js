@@ -71,7 +71,8 @@ let db;
     if(ratingRows[0].count === 0) {
         await db.execute(`INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
         VALUES (11, 2, 1, 4, 'This dog was great!'),
-        (15, 2, 1, 5, 'Had fun');`);
+        (15, 2, 1, 5, 'Had fun'),
+        (13, 2, 1, 3, 'Mid experience');`);
     }
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
