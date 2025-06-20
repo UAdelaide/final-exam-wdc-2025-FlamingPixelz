@@ -29,7 +29,7 @@ router.get('/api/walkrequests/open', async function(req, res, next) {
     const[walkRequests] = await db.execute(
       `SELECT w.request_id, d.dog_name, w.requested_time, w.duration_minutes, w.location, username as u.owner_username
       FROM WalkRequests w
-      INNER JOIN `
+      INNER JOIN Dogs d ON w.`
     );
 
     res.json(walkRequests);
