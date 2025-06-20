@@ -96,8 +96,9 @@ router.post('/logout', (req, res) => {
 
 });
 
-router.get('/yourDogs', (req, res) => {
+router.get('/yourDogs', async (req, res) => {
 
+  const [dogs] = 
 
 
 });
