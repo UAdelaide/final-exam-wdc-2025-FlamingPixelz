@@ -133,7 +133,7 @@
           try {
 
             const response = await fetch('/api/users/yourDogs')
-            ownerDogs.value = await response.json();
+            ownerDogs.value = await response.json(); // Fills ownerDogs with data from server
 
           } catch (err) {
             error.value = err.message;
