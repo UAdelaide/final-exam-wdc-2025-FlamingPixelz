@@ -45,6 +45,12 @@ router.get('/api/walkrequests/open', async function(req, res, next) {
 // Return a summary of each walker with their average rating and number of completed walks.
 router.get('/api/walkers/summary', async function(req, res, next) {
 
+  try {
+
+  } catch(err) {
+    
+  }
+
 });
 
 module.exports = router;
