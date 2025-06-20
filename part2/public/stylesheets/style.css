@@ -161,6 +161,7 @@ input {
     margin:10px;
 }
 
+
 .logoutBtn {
     position: fixed;
     top: 3%;
@@ -169,5 +170,5 @@ input {
 }
 
 .logoutBtn:hover {
-    
+    background-color: red;
 }
