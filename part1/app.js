@@ -46,7 +46,12 @@ let db;
     }
     const [dogRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
     if(dogRows[0].count === 0) {
-        await db.execute(``);
+        await db.execute(`INSERT INTO Dogs (owner_id, name, size)
+        VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
+        ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
+        ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Poppy', 'large'),
+        ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Henry', 'small'),
+        ((SELECT user_id FROM Users WHERE username = 'Bwana'), 'Enji', 'medium');`);
     }
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
