@@ -47,10 +47,11 @@ router.get('/api/walkers/summary', async function(req, res, next) {
 
   try {
     const[walkerSummary] = await db.execute(
-      `SELECT u.username, COUNT(r.rating) AS total_ratings, AVG(r.rating) AS average_rating, COUNT(CASE WHEN w.status = 'completed' THEN 1 END) AS completed_walks
-      FROM Users u
-      LEFT JOIN WalkRequests w ON u.user_id = w.walker_id
-      LEFT JOIN WalkRatings r ON w.request_id = r.request_id
+      `SELECT u.username, COUNT(r.rating) AS total_ratings, AVG(r.rating) AS average_rating, COUNT(w.status) AS completed_walks
+      FROM WalkRatings r
+      LEFT JOIN Users u ON r.walker_id = u.user_id
+      LEFT JOIN WalkRequests w ON r.request_id = w.request_id
+      WHERE w.status = 'completed'
       GROUP BY u.username;`
 
     );
