@@ -16,7 +16,9 @@ p {
   font-size: x-small;
 }
 
-
+#inconsistent {
+  color: orange;
+}
 
 button {
   background-color: grey;
