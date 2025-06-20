@@ -53,8 +53,6 @@ router.post('/login', async (req, res) => {
     if (password !== user.password_hash) {
       return res.status(401).json({ error: 'Invalid Email or password!' });
     }
-    // Creating data gathered from user session
-    if(password === rows[0].password) {
       req.session.user = {
         user_id: rows[0].user_id,
         username: rows[0].username,
@@ -63,7 +61,6 @@ router.post('/login', async (req, res) => {
       };
       res.json({ message: 'Login successful', user: rows[0] });
       res.json({ redirect: '/owner-dashboard' });
-    }
 
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
