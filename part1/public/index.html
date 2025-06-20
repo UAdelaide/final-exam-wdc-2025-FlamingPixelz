@@ -45,7 +45,8 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
         async getImages() {
             try{
 
-                const getImage = await fetch()
+                const getImage = await fetch('https://dog.ceo/api/breeds/image/random');
+                
 
             } catch (err) {
                 console.error('Failed to get images from API!');
