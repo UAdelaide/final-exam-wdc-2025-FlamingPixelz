@@ -55,4 +55,4 @@ CREATE TABLE WalkRatings (
 );
 
 
-INSERT INTO Users ()
+INSERT INTO Users (username, )
