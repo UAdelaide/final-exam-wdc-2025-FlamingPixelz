@@ -30,6 +30,8 @@ router.get('/api/walkrequests/open', async function(req, res, next) {
 
     );
 
+    res.json(walkRequests)
+
   } catch(err) {
 
   }
