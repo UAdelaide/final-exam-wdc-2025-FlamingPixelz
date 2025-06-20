@@ -51,7 +51,7 @@ router.get('/api/walkers/summary', async function(req, res, next) {
       FROM WalkRatings r
       INNER JOIN Users u ON r.walker_id = u.user_id
       INNER JOIN WalkRequests w ON r.request_id = w.request_id
-      WHERE `
+      WHERE w.status = 'completed'`
 
     );
 
