@@ -25,6 +25,12 @@ router.get('/api/dogs', async function(req, res, next) {
 // Return all open walk requests
 router.get('/api/walkrequests/open', function(req, res, next) {
 
+  try {
+
+  } catch(err) {
+    
+  }
+
 });
 
 // Return a summary of each walker with their average rating and number of completed walks.
