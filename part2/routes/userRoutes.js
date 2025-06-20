@@ -61,7 +61,7 @@ router.post('/login', async (req, res) => {
         role: rows[0].role
       };
 
-      // Red
+      // Redirects to the correct dashboard depending on user role
       if(user.role === 'owner') {
         return res.redirect('/owner-dashboard.html');
       }
