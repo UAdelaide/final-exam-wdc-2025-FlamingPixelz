@@ -51,7 +51,7 @@ router.post('/login', async (req, res) => {
     const user = rows[0];
 
     if (password !== user.password_hash) {
-      return res.status(401).json()
+      return res.status(401).json({ error: 'Invalid Email or password!' });
     }
     // Creating data gathered from user session
     if(password === rows[0].password) {
