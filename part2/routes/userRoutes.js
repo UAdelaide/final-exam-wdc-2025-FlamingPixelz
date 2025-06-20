@@ -53,7 +53,7 @@ router.post('/login', async (req, res) => {
     // Stores user information in user variable
     const user = rows[0];
 
-    //
+    // If the 
     if (password !== user.password_hash) {
       return res.status(401).json({ error: 'Invalid Email or password!' });
     }
