@@ -77,5 +77,5 @@ CREATE TABLE WalkRatings (
 -- ((SELECT dog_id FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE name = 'Henry' AND Users.username = 'alice123'), '2025-06-11 13:30:00', 45, 'Court St', 'cancelled');
 
 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
-VALUES (11, 2, 1, 4.5, 'This dog was great!'),
-(11, 15, 1, 4.8, 'Had fun'),
+VALUES (11, 2, 1, 4, 'This dog was great!'),
+(11, 15, 1, 5, 'Had fun');
