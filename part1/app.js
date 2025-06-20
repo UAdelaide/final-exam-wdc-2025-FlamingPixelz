@@ -44,7 +44,8 @@ let db;
         ('Bwana', 'Bwana@example.com', 'coolPassword', 'owner');
       `);
     }
-    const [dogRows] = await db.execute('')
+    const [dogRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
+    if(dogRows[0])
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
