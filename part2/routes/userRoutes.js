@@ -48,7 +48,7 @@ router.post('/login', async (req, res) => {
     if (rows.length === 0) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
-
+    
     if(password === rows[0].password) {
       req.session.user = {
         user_id: rows[0].user_id,
@@ -56,8 +56,6 @@ router.post('/login', async (req, res) => {
         email: rows[0].email,
         role: rows[0].role
       };
-
-      if(role ==)
       res.json({ message: 'Login successful', user: rows[0] });
       res.json({ redirect: '/owner-dashboard' });
     }
