@@ -100,7 +100,6 @@
           }
         }
 
-
         async function submitWalkRequest() {
           try {
             const res = await fetch('/api/walks', {
@@ -125,6 +124,19 @@
             error.value = err.message;
             message.value = '';
           }
+        }
+
+        async function dogList() {
+
+          try {
+
+            const response = await fetch('/api/yourDogs')
+            ownerDogs.value = await response.json();
+
+          } catch (err) {
+            error.value = err.message;
+          }
+
         }
 
         onMounted(() => {
