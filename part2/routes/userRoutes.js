@@ -35,7 +35,7 @@ router.get('/me', (req, res) => {
   res.json(req.session.user);
 });
 
-// POST login (dummy version)
+// POST login
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
@@ -53,7 +53,7 @@ router.post('/login', async (req, res) => {
     // Stores user information in user variable
     const user = rows[0];
 
-    // If the 
+    // If the password does not match
     if (password !== user.password_hash) {
       return res.status(401).json({ error: 'Invalid Email or password!' });
     }
