@@ -113,7 +113,7 @@ router.get('/yourDogs', async (req, res) => {
 });
 
 // Return a list of all dogs with their size and owner's username. - From part 1
-router.get('/api/dogs', async function(req, res, next) {
+router.get('/dogs', async function(req, res, next) {
 
   try {
     const [dogs] = await db.execute(
