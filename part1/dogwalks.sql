@@ -75,3 +75,5 @@ CREATE TABLE WalkRatings (
 -- ((SELECT dog_id FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE name = 'Max' AND Users.username = 'alice123'), '2025-05-11 09:00:00', 60, 'City Centre', 'completed'),
 -- ((SELECT dog_id FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE name = 'Enji' AND Users.username = 'Bwana'), '2025-06-10 10:30:00', 30, 'Glenelg Beach', 'accepted'),
 -- ((SELECT dog_id FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE name = 'Henry' AND Users.username = 'alice123'), '2025-06-11 13:30:00', 45, 'Court St', 'cancelled');
+
+INSERT INTO 
