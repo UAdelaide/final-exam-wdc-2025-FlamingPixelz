@@ -8,7 +8,13 @@ router.get('/', function(req, res, next) {
 
 // Return a list of all dogs with their size and owner's username.
 router.get('/api/dogs', function(req, res, next) {
-  
+
+  try {
+
+
+  } catch(err) {
+    res.
+  }
 
 });
 
