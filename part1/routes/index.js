@@ -46,7 +46,7 @@ router.get('/api/walkrequests/open', async function(req, res, next) {
 router.get('/api/walkers/summary', async function(req, res, next) {
 
   try {
-    
+    const[walkerSummary] = await db.execute
 
   } catch(err) {
     res.status(500).json({ error: 'Failed to fetch walker summary from database!' });
