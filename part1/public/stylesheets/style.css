@@ -24,7 +24,7 @@ p {
 button {
   background-color: grey;
   color: yellow;
-  position: fixed;
+  position: absolute;
 
   left: 50%;
   bottom: 40%;
