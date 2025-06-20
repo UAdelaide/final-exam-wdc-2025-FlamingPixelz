@@ -78,3 +78,4 @@ CREATE TABLE WalkRatings (
 
 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
 VALUES (11, 2, 1, 4.5, 'This dog was great!'),
+(11, 2, 1, 4.5, 'Had fun'),
