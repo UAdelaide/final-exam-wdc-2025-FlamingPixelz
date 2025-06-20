@@ -96,7 +96,7 @@ router.post('/logout', (req, res) => {
 
 });
 
-
+router.get('/')
 
 
 module.exports = router;
