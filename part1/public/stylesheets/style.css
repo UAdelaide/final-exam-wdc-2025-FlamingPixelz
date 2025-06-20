@@ -19,6 +19,7 @@ p {
 #inconsistent {
   color: orange;
   font-size: xx-large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 button {
