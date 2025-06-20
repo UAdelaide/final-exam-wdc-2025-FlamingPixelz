@@ -96,7 +96,7 @@ router.post('/logout', (req, res) => {
 
 });
 
-router.get('/')
+router.get('/yourDogs')
 
 
 module.exports = router;
