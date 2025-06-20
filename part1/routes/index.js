@@ -27,10 +27,10 @@ router.get('/api/walkrequests/open', async function(req, res, next) {
 
   try {
     const[walkRequests] = await db.execute(
-
+      ``
     );
 
-    res.json(walkRequests)
+    res.json(walkRequests);
 
   } catch(err) {
 
