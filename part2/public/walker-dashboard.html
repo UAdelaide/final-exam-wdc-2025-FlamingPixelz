@@ -64,7 +64,7 @@
         async function getCurrentUser () {
           try {
 
-            const res = 
+            const res = await fetch('/api/users')
 
           } catch (err) {
             error.value = err.message;
