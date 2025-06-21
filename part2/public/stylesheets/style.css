@@ -177,7 +177,7 @@ input {
     margin-top: 100px;
 }
 
-/*  */
+/* added light grey stripes to the table */
 td:nth-child(even) {
     background-color: #eaeaea;
 }
