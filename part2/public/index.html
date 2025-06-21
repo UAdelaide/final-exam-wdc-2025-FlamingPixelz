@@ -72,6 +72,7 @@
                 const res = await fetch('/api/users/dogs');
                 const info = await res.json();
 
+                // Associates dog image with each 
                 for(const dog of info) {
                 const getImage = await fetch('https://dog.ceo/api/breeds/image/random');
                 const img = await getImage.json();
