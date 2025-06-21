@@ -117,7 +117,7 @@ router.get('/dogs', async function(req, res, next) {
 
   try {
     const [dogs] = await db.execute(
-      `SELECT Dogs.dog_id, Dogs.name, Dogs.size, Users.username AS owner_username FROM Dogs
+      `SELECT Dogs.dog_id, Dogs.name, Dogs.size, Users.user_id AS owner_username FROM Dogs
       INNER JOIN Users ON Dogs.owner_id = Users.user_id`
     );
     res.json(dogs);
