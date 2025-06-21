@@ -177,4 +177,6 @@ input {
     margin-top: 100px;
 }
 
-tr:nth-child(even)
+tr:nth-child(even) {
+    background-color: #aaaaaa;
+}
