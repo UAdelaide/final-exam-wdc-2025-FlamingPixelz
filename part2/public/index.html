@@ -38,8 +38,8 @@
         <th>Owner ID</th>
         <th>Photo</th>
       </tr>
-      <tr v-for="(dog, x) in dogs" :key="">
-        <td></td>
+      <tr v-for="(dog, x) in dogs" :key="index">
+        <td>{{ dog.name }}</td>
         <td></td>
         <td></td>
         <td></td>
