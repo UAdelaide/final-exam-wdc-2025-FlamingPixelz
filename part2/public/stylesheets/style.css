@@ -176,3 +176,5 @@ input {
 .margin {
     margin-top: 100px;
 }
+
+tr:nth-child(even)
